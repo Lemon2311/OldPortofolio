@@ -1,0 +1,62 @@
+<section>
+  <div class="columns has-background-grey-darker py-6">
+    <div class="column">
+
+    </div>
+    <div class="column py-1 px-6">
+    <div class="card">
+    <div class="card-content">
+      <p class="title has-text-danger-dark line">
+        {{object[0].full_name.slice(10)}}
+      </p>
+      <img class="pb-4" id="myPhoto" src="./assets/RewindMaze.jpg" alt="RewindMazeLogo" height="300" width="315">
+      <p class="subtitle">
+        {{object[0].description}}
+      </p>
+    </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        <span>
+          View on <a href="https://play.google.com/store/apps/details?id=com.rewind.lemon231&gl=RO">GooglePlay</a>
+        </span>
+      </p>
+    </footer>
+  </div>
+    </div>
+
+    <div class="column py-1 px-6">
+
+    <div class="dropdown">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+          <span>GitHub Projects</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+        <div class="dropdown-content">
+
+          <a href="{{project.html_url}}" class="dropdown-item" *ngFor="let project of object">
+
+            {{project.full_name.slice(10)}}
+
+
+          </a>
+
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="column">
+
+    </div>
+    <div class="column">
+
+    </div>
+  </div>
+  </section>
